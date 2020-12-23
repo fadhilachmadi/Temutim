@@ -1,0 +1,44 @@
+
+
+.container-custome{
+  padding: 100px 0px;
+}
+
+.sub-container-custome{
+  
+  width: 60%;
+  height:450px;
+  margin-left: 230px;
+  padding: 25px 150px;
+  font-weight: bold;
+}
+
+.payment-type-container{
+  margin-top: 25px;
+ 
+}
+
+label{
+  cursor: pointer;
+  filter : grayscale(100%);
+}
+
+label :hover{
+  filter : grayscale(0);
+}
+
+input[type="radio"]:checked + label{
+  
+  filter : grayscale(0);
+}
+
+.payment-type-custome{
+  padding : 15px 0px; 
+}
+
+.term-text{
+
+text-align: left;
+ padding: 0px 230px ;
+ margin: 50px 0;
+}
