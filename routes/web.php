@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/premium/payment', 'PaymentController@goToPayment');
 Route::post('/payment/create', 'PaymentController@createPayment');
+Route::resource('user','UserController');

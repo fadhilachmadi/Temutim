@@ -1,0 +1,16 @@
+.card-title{
+    color: #00587A;
+    font-weight: bold;
+}
+
+.btn-edit {
+    width: 180px;
+}
+
+.custom-card{
+    border: 1.5px solid #00587A;
+}
+
+.custom-body {
+    margin-left: 50px;
+}
