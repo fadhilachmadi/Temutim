@@ -19,9 +19,9 @@ class CreatePremiumMembershipsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('payment_id');
             $table->foreign('payment_id')->references('id')->on('payments');
-            $table->string('status');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->string('status')->default('');
+            // $table->dateTime('start_date');
+            // $table->dateTime('end_date');
             $table->timestamps();
         });
     }

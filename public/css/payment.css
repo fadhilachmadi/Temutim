@@ -1,7 +1,8 @@
 
 
 .container-custome{
-  padding: 100px 0px;
+  padding: 100px 0 200px;
+
 }
 
 .sub-container-custome{
@@ -9,7 +10,7 @@
   width: 60%;
   height:450px;
   margin-left: 230px;
-  padding: 25px 150px;
+  padding: 1.5rem 1rem;
   font-weight: bold;
 }
 
@@ -38,7 +39,13 @@ input[type="radio"]:checked + label{
 
 .term-text{
 
-text-align: left;
- padding: 0px 230px ;
- margin: 50px 0;
+ text-align: left;
+ padding: 0 0.5rem ;
+ margin: 1rem 0;
+}
+
+.btn-custome{
+  
+  margin: 2rem 0;
+  
 }

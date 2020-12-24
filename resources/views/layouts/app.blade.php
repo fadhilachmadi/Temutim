@@ -22,6 +22,7 @@
     <!-- Styles-->
     @yield('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -56,9 +57,20 @@
                                 </li>
                             @endif
                         @else
+
+                        
+                        @if (Auth::user()->status == "regular")
+                            <form class="nav-item form-premium"  action="/premium/payment" method="POST">
+                                @csrf
+                                @method('GET')
+                                <button type="submit" class="btn btn-premium">PREMIUM</button>
+                            </form>
+                        @endif
                             <li class="nav-item dropdown">
+
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="/images/profile_image.png" alt="Profile Image" style="width: 50%">
+                                    <img src="/images/profile_image.png" alt="Profile Image" style="width: 50px">
 
                                 </a>
 
@@ -72,7 +84,13 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+
+                                    <a class="dropdown-item" href="/">
+                                     Profile
+                                    </a>
                                 </div>
+                                
+
                             </li>
                         @endguest
                     </ul>
