@@ -70,7 +70,7 @@
 
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="/images/profile_image.png" alt="Profile Image" style="width: 50px">
+                                    <img src="{{Auth::user()->profile_picture}}" alt="Profile Image" style="width: 50px">
 
                                 </a>
 
@@ -104,8 +104,8 @@
             
         </div>
 
-        <footer class="navbar navbar-expand-md text-white" style="background-color: #00587A">
-            <div class="container-fluid" style="padding: 10px 0px">
+        <footer class="navbar navbar-expand-md text-white footer" style="background-color: #00587A">
+            <div class="container-fluid" style="padding: 10px 15px">
 
                 <div class="navbar-nav mr-auto">
                     <h6 style="margin: 0">

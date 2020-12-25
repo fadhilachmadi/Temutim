@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->dateTime('post_date');
-            $table->string('media_file');
+            $table->string('media_file')->nullable();
             $table->timestamps();
         });
     }

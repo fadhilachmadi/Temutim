@@ -7,6 +7,7 @@ use App\Payment;
 use App\User;
 use App\PremiumMembership;
 use Auth;
+use Carbon\Carbon;
 
 class PaymentController extends Controller
 {
@@ -24,6 +25,9 @@ class PaymentController extends Controller
         PremiumMembership::create([
             'user_id' => Auth::user()->id,
             'payment_id' => $request->payment_type,
+            'start_date' => Carbon::now(),
+            'end_date' => Carbon::now()->addMonth(),
+            
         ]);
 
         $user = User::findOrFail(Auth::user()->id)->update([

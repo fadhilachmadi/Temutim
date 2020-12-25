@@ -12,3 +12,9 @@
   stroke: #DCB21F;
   color: white;
 }
+
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
