@@ -60,7 +60,7 @@
 
 
                         @if (Auth::user()->status == "regular")
-                            <form class="nav-item form-premium"  action="/premium/payment" method="POST">
+                            <form class="nav-item form-premium"  action="{{route('packageoffer')}}" method="POST">
                                 @csrf
                                 @method('GET')
                                 <button type="submit" class="btn btn-premium">PREMIUM</button>
@@ -70,7 +70,7 @@
 
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="{{Auth::user()->profile_picture}}" alt="Profile Image" style="width: 50px">
+                                    <img src="/images/{{Auth::user()->profile_picture}}" alt="Profile Image" style="width: 50px">
 
                                 </a>
 
@@ -117,7 +117,7 @@
 
                 <div class="navbar-nav mr-auto">
                     <h6 style="margin: 0">
-                        © Copyright 2020 TemuTim Group
+                         Copyright © 2020 TemuTim Group
                     </h6>
 
                 </div>

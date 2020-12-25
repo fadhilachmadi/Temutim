@@ -92,7 +92,7 @@
                         <div class="col-md-6 custom-radio" >
                             <input type="radio" name="gender" id="Male" value="Male">
                             <label for="Male">Male </label>
-                            <input style="margin-left: 50px; margin-top: 10px;" type="radio" name="gender" id="Female" value="Female" required>
+                            <input type="radio" name="gender" id="Female" value="Female" required>
                             <label for="Female">Female </label>
 
                             @error('gender')
@@ -133,7 +133,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-6 ">
-                            <button type="submit" class="btn btn-primary btn-edit" style="background: #2EC66F">
+                            <button type="submit" class="btn btn-primary btn-edit">
                                 Edit Profile
                             </button>
                         </div>

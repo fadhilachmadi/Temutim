@@ -41,4 +41,8 @@ class User extends Authenticatable
     public function isUser(){
         return $this->id === Auth::user()->id;
     }
+
+    public function status(){
+        return $this->status === "regular";
+    }
 }
