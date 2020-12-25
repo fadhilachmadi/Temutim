@@ -96,15 +96,17 @@
                     </div>
 
                     <div class="form-group row">
-                            <div class="image-upload">
-                                <label class="col-md-12 col-form-label text-md-left profile_picture" for="profile_picture">
-                                    <img src="{{asset('images/upload_image.png')}}" alt="">
-                                    Profile Picture
-                                </label>
-                                <div class="col-md-6">
-                                    <input type="file" id="profile_picture" hidden>
-                                </div>
-                            </div>
+                        <label for="profile_picture" class="col-md-4 col-form-label text-md-left"><img src="{{asset('images/upload_image.png')}}" alt=""> Profile Picture</label>
+
+                        <div class="col-md-6">
+                            <input id="profile_picture" type="file" class="form-control @error('profile_picture') is-invalid @enderror" name="profile_picture"  required autocomplete="profile_picture" autofocus hidden>
+
+                            @error('profile_picture')
+                            <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                            @enderror
+                        </div>
                     </div>
 
                     <div class="form-group row mb-0">

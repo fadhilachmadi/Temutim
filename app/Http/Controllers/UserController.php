@@ -81,8 +81,8 @@ class UserController extends Controller
             $input = $request->all();
             $input['password']=bcrypt($request->password);
         }
-
-        if($file = $request->file('profile_picture')){
+        $file = $request->file('profile_picture');
+        if($file){
             unlink('images/' . $user->profile_picture);
             $profile_picture = $file->getClientOriginalName();
             $file->move('images',$profile_picture);
