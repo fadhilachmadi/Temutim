@@ -27,6 +27,7 @@ class EditProfileRequest extends FormRequest
             'username'=>'required|string',
             'position' => 'required|string',
             'email' => ['required', 'string', 'email:rfc,dns', 'max:255'],
+            'password'=>'required|string|confirmed',
             'DOB' => 'required|date|before_or_equal:today',
             'gender' => 'required',
             'phone_number' => 'required|numeric|digits_between:11,12',

@@ -15,7 +15,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    
+
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -43,7 +43,7 @@
                 @endif
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-   
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -58,7 +58,7 @@
                             @endif
                         @else
 
-                        
+
                         @if (Auth::user()->status == "regular")
                             <form class="nav-item form-premium"  action="/premium/payment" method="POST">
                                 @csrf
@@ -89,7 +89,7 @@
                                      Profile
                                     </a>
                                 </div>
-                                
+
 
                             </li>
                         @endguest
@@ -98,10 +98,18 @@
             </div>
         </nav>
 
+        <div class="container">
+            @if(session('msg'))
+                <div class="alert alert-success" role="alert" style="margin: 20px">
+                    {{ session('msg') }}
+                </div>
+            @endif
+        </div>
+
         <div class="py-4">
             @yield('content')
-            
-            
+
+
         </div>
 
         <footer class="navbar navbar-expand-md text-white" style="background-color: #00587A">
@@ -111,25 +119,25 @@
                     <h6 style="margin: 0">
                         © Copyright 2020 TemuTim Group
                     </h6>
-                    
+
                 </div>
 
                 <div class="navbar-nav ml-auto">
                     <h6 style="margin: 0">
                         Need help? Please <a href="#" class="text-white"><b>Contact Us</b></a>
                     </h6>
-                    
-                </div>
-            
-            </div>
-            
-        </footer>
-        
-        
 
-        
-            
-        
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+
+
+
     </div>
 </body>
 </html>

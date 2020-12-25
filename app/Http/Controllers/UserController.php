@@ -90,7 +90,7 @@ class UserController extends Controller
         }
 
         $user->update($input);
-        return "Success";
+        return back()->with('msg','Update Profile Success!');
 
     }
 
