@@ -96,9 +96,8 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-6">
                             <div class="image-upload">
-                                <label class="col-md-6 col-form-label text-md-left profile_picture" for="profile_picture">
+                                <label class="col-md-12 col-form-label text-md-left profile_picture" for="profile_picture">
                                     <img src="{{asset('images/upload_image.png')}}" alt="">
                                     Profile Picture
                                 </label>
@@ -106,18 +105,6 @@
                                     <input type="file" id="profile_picture" hidden>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="image-upload">
-                                <label class="col-md-6 col-form-label text-md-left profile-picture" for="card_identity">
-                                    <img src="{{asset('images/upload_image.png')}}" alt="">
-                                    Card Identity
-                                </label>
-                                <div class="col-md-6">
-                                    <input type="file" id="card_identity" hidden>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="form-group row mb-0">

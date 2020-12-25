@@ -30,8 +30,7 @@ class EditProfileRequest extends FormRequest
             'DOB' => 'required|date|before_or_equal:today',
             'gender' => 'required',
             'phone_number' => 'required|numeric|digits_between:11,12',
-            'profile_picture' => 'mimes:jpg,png,jpeg,svg',
-            'card_identity' => 'mimes:jpg,png,jpeg,svg'
+            'profile_picture' => 'mimes:jpg,png,jpeg,svg'
         ];
     }
 }

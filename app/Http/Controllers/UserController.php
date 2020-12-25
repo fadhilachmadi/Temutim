@@ -82,17 +82,11 @@ class UserController extends Controller
             $input['password']=bcrypt($request->password);
         }
 
-        $file1 = $request->file('profile_picture');
-        $file2 = $request->file('card_identity');
-        if($file1 && $file2){
+        if($file = $request->file('profile_picture')){
             unlink('images/' . $user->profile_picture);
-            unlink('images/' . $user->card_identity);
-            $profile_picture = $file1->getClientOriginalName();
-            $card_identity = $file2->getClientOriginalName();
-            $file1->move('images',$profile_picture);
-            $file2->move('images',$card_identity);
+            $profile_picture = $file->getClientOriginalName();
+            $file->move('images',$profile_picture);
             $input['profile_picture'] = $profile_picture;
-            $input['card_identity'] = $card_identity;
         }
 
         $user->update($input);
