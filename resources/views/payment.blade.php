@@ -7,7 +7,6 @@
 
 @section('css')
 <link href="{{ asset('css/payment.css') }}" rel="stylesheet">
-
 @endsection
 
 @section('content')
@@ -23,14 +22,14 @@
 
         <div class="container payment-type-container">
         @foreach ($payments as $payment)
-        
+
           <div class="border payment-type-custome">
-            <input class="sr-only" type="radio" value="{{$payment->id}}"  name="payment_type" class="" id="{{$payment->type_name}}">        
+            <input class="sr-only" type="radio" value="{{$payment->id}}"  name="payment_type" class="" id="{{$payment->type_name}}">
             <label class="payment-type-label" for="{{$payment->type_name}}">
               <img src="{{$payment->image}}" alt="Payment Type Photo">
             </label>
          </div>
-        
+
         @endforeach
       </div>
 

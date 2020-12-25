@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('gender')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('profile_picture')->nullable();
-            $table->string('card_identity')->nullable();
             $table->string('CV')->nullable();
             $table->string('portfolio')->nullable();
             $table->string('status')->nullable();
