@@ -14,7 +14,7 @@ class CommentSeeder extends Seeder
     {
         //
         DB::table('comments')->insert([
-            'user_id' => 2,
+            'user_id' => 1,
             'post_id' => 1,
             'text' => 'Apakah ini gratis?',
             'comment_time' => Carbon::now()->addMonths(3),

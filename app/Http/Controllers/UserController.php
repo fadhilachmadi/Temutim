@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('EditProfile');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -83,14 +88,16 @@ class UserController extends Controller
         }
         $file = $request->file('profile_picture');
         if($file){
-            unlink('images/' . $user->profile_picture);
-            $profile_picture = $file->getClientOriginalName();
+            if($user->profile_picture!=null) {
+                unlink('images/' . $user->profile_picture);
+            }
+            $profile_picture = $user->username. "_" . $file->getClientOriginalName();
             $file->move('images',$profile_picture);
             $input['profile_picture'] = $profile_picture;
         }
 
         $user->update($input);
-        return "Success";
+        return back()->with('msg','Update Profile Success!');
 
     }
 

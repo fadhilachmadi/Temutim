@@ -7,6 +7,9 @@
     width: 180px;
     height: 40px;
     border: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background: #2EC66F;
 }
 
 .custom-card{
@@ -15,4 +18,13 @@
 
 .custom-body {
     margin-left: 50px;
+}
+
+#Female{
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.footer {
+    position:unset;!important;
 }

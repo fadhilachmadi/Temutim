@@ -11,32 +11,38 @@ use Carbon\Carbon;
 
 class PaymentController extends Controller
 {
-    
+
+    public function __construct(){
+        $this->middleware('PackageOffer')->only('showOffer');
+    }
+
     public function goToPayment(){
         $payments = Payment::all();
         return view('payment', compact('payments'));
     }
 
-    
-    public function createPayment(Request $request){
 
-       
+    public function createPayment(Request $request){
 
         PremiumMembership::create([
             'user_id' => Auth::user()->id,
             'payment_id' => $request->payment_type,
             'start_date' => Carbon::now(),
             'end_date' => Carbon::now()->addMonth(),
-            
+
         ]);
 
         $user = User::findOrFail(Auth::user()->id)->update([
             'status' => "premium"
         ]);
-        
+
         // dd($user->username);
-        
+
         return redirect('/home');
+    }
+
+    public function showOffer(){
+        return view('packageoffer');
     }
 
 }
