@@ -83,8 +83,10 @@ class UserController extends Controller
         }
         $file = $request->file('profile_picture');
         if($file){
-            unlink('images/' . $user->profile_picture);
-            $profile_picture = $file->getClientOriginalName();
+            if($user->profile_picture!=null) {
+                unlink('images/' . $user->profile_picture);
+            }
+            $profile_picture = $user->username. "_" . $file->getClientOriginalName();
             $file->move('images',$profile_picture);
             $input['profile_picture'] = $profile_picture;
         }

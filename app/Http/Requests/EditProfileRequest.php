@@ -30,7 +30,7 @@ class EditProfileRequest extends FormRequest
             'password'=>'required|string|confirmed',
             'DOB' => 'required|date|before_or_equal:today',
             'gender' => 'required',
-            'phone_number' => 'required|numeric|digits_between:11,12',
+            'phone_number' => 'required|numeric|digits_between:11,12|unique:users',
             'profile_picture' => 'mimes:jpg,png,jpeg,svg'
         ];
     }
