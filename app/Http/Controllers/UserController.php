@@ -19,9 +19,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $data = User::where("id", $id)->first();
+        return view('auth.user.profile', compact('data'));
     }
 
     /**
@@ -65,7 +66,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user =User::findOrFail($id);
-        return view('user.edit', compact('user'));
+        return view('auth.user.edit', compact('user'));
     }
 
     /**

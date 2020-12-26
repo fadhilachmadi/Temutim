@@ -8,7 +8,7 @@
         </div>
 
         <div class="col-md-12  d-flex justify-content-center text-center">
-            <form class="text-center" method="POST" action="{{ route('register') }}">
+            <form class="text-center" method="POST" action="">
                 @csrf
                 <div class="row text-center py-1">
                     <h2>Sign up to find your own team</h2>

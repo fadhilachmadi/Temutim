@@ -85,7 +85,7 @@
                                         @csrf
                                     </form>
 
-                                    <a class="dropdown-item" href="/">
+                                    <a class="dropdown-item" href="{{ url('profile/'.Auth::user()->id) }}">
                                      Profile
                                     </a>
                                 </div>

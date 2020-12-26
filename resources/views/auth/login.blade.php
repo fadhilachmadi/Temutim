@@ -7,7 +7,7 @@
             <img src="{{ asset('images/logo_temutim.png') }}" alt="">
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="">
                 @csrf
                 <div class="row py-1">
                     <h2>Let's find your own team!</h2>
@@ -15,9 +15,9 @@
                 
                         <div class="form-group row py-1">
                             <div class="col-md-12">
-                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Username">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
 
-                                @error('username')
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

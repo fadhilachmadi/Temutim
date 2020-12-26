@@ -41,3 +41,5 @@ Route::get('/profile', function () {
 Route::get('/editprofile', function () {
     return view('auth.user.edit');
 });
+
+Route::get('/profile/{id}', 'UserController@index');
