@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                    {{-- <p>You are {{Auth::user()->username}}, you are {{Auth::user()->status}} member</p> --}}
+                    <p>You are {{Auth::user()->username}}, you are {{Auth::user()->status}} member</p>
                 </div>
             </div>
         </div>
