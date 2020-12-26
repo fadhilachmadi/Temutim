@@ -1,0 +1,19 @@
+.emp-AO {
+    border: 1px solid #00587a;
+    border-radius: 20px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.Account-overview{
+    color: #00587a;
+    font-weight: 700;
+}
+.custom-file-label::after{
+    background-color:  #38c172 !important;
+    color: white;
+}
+.custom-file-Portfolio::after{
+    background-color:  #38c172 !important;
+    color: white;
+}

@@ -26,3 +26,5 @@ Route::resource('user','UserController');
 Route::get('/contact', 'ContactUsController@index');
 Route::resource('contact', 'ContactUsController');
 Route::get('/offers','PaymentController@showOffer')->name('packageoffer');
+
+Route::get('/profile/{id}','UserController@index');
