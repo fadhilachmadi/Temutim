@@ -21,6 +21,5 @@ class PostSeeder extends Seeder
             'media_file' => '/images/ovo_logo.png',
             'post_date' => Carbon::now(),    
         ]);
-
     }
 }
