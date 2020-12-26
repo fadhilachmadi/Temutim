@@ -1,14 +1,15 @@
 @extends('layouts.app')
 @section('css')
-    <link href="{{ asset('css/editprofile.css') }}" rel="stylesheet">
+
 @endsection
 @section('content')
-    
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             <div class="row emp-AO">
                 <form method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-md-12">
                             <div class="profile-img">
@@ -18,9 +19,9 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="{{ asset('images/profile_image.png') }}" alt=""/>
+                                <img src="/images/{{$data->profile_picture}}" alt="" style="width: 60px; height: 60px;"/>
                             </div>
-                            
+
                             <div class="col-md-8 pl-5 mt-2">
                                 <h5>{{$data->username}}</h5>
                                 <small>{{$data->position}}</small>
@@ -29,24 +30,22 @@
 
                         <div class="col-md-12">
                             <div class="profile-head mt-3">
-                                @foreach ($users as $data)
                                 <tr>
                                     <p>Email {{$data->email}}</p>
                                     <p>Date of Birth {{$data->DOB}}</p>
                                     <p>Gender {{$data->gender}}</p>
                                     <p>Phone {{$data->phone_number}}</p>
                                     <p>Membership {{$data->status}}</p>
-                                    <a class="btn btn-success" href="{{url('/editprofile')}}">Edit Profile</a>
+                                    <a class="btn btn-success" href="{{route('user.edit',Auth::user()->id)}}">Edit Profile</a>
                                 </tr>
-                                @endforeach
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        
-        <div class="col-md-4"> 
+
+        <div class="col-md-4">
             {{-- ads --}}
         </div>
 

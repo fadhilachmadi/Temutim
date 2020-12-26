@@ -37,3 +37,4 @@ Route::get('/editprofile', function () {
 
 Route::get('/post/detail/{id}', 'PostController@detail');
 Route::post('/comment/send/{id}', 'CommentController@send');
+Route::get('/profile/{id}','UserController@index');
