@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -31,4 +31,13 @@ Route::get('/offers', 'PaymentController@showOffer')->name('packageoffer');
 
 Route::get('/newpost', function () {
     return view('newpost');
+});
+Route::get('/offers', 'PaymentController@showOffer')->name('packageoffer');
+
+Route::get('/profile', function () {
+    return view('auth.user.profile');
+});
+
+Route::get('/editprofile', function () {
+    return view('auth.user.edit');
 });

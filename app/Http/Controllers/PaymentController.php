@@ -14,6 +14,7 @@ class PaymentController extends Controller
 
     public function __construct(){
         $this->middleware('PackageOffer')->only('showOffer');
+        $this->middleware('MakePayment')->except('showOffer');
     }
 
     public function goToPayment(){
@@ -35,8 +36,6 @@ class PaymentController extends Controller
         $user = User::findOrFail(Auth::user()->id)->update([
             'status' => "premium"
         ]);
-
-        // dd($user->username);
 
         return redirect('/home');
     }

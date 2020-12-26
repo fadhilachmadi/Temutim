@@ -1,0 +1,96 @@
+@extends('layouts.app')
+@section('css')
+    <link href="{{ asset('css/editprofile.css') }}" rel="stylesheet">
+@endsection
+@section('content')
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row emp-AO">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-img">
+                                <h2 class="text-center Account-overview">Account Overview</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{{ asset('images/profile_image.png') }}" alt=""/>
+                            </div>
+                            
+                            <div class="col-md-8 pl-5 mt-2">
+                                <h5>{{$data->username}}</h5>
+                                <small>{{$data->position}}</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="profile-head mt-3">
+                                @foreach ($users as $data)
+                                <tr>
+                                    <p>Email {{$data->email}}</p>
+                                    <p>Date of Birth {{$data->DOB}}</p>
+                                    <p>Gender {{$data->gender}}</p>
+                                    <p>Phone {{$data->phone_number}}</p>
+                                    <p>Membership {{$data->status}}</p>
+                                    <a class="btn btn-success" href="{{url('/editprofile')}}">Edit Profile</a>
+                                </tr>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-md-4"> 
+            {{-- ads --}}
+        </div>
+
+        <div class="col-md-8 mt-3">
+            <div class="row emp-AO">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-img">
+                                <h2 class="text-center Account-overview">Experience</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="col-md-12">
+                            <div class="profile-head mt-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form>
+                                            <h5><strong>CV</strong></h5>
+                                            <div class="custom-file">
+                                              <input type="file" class="custom-file-input" id="customFile">
+                                              <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                          </form>
+                                    </div>
+
+                                    <div class="col-md-12 mt-3">
+                                        <form>
+                                            <h5><strong>Portfolio</strong></h5>
+                                            <div class="custom-file">
+                                              <input type="file" class="custom-file-input" id="customPortofolio">
+                                              <label class="custom-file-label" for="customPortofolio">Choose file</label>
+                                            </div>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
