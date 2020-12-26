@@ -13,7 +13,7 @@ class PremiumMembership extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function isRegularUser(){
-        return $this->user->status === "regular";
-    }
+    // public function isRegularUser(){
+    //     return $this->user->status === "regular";
+    // }
 }

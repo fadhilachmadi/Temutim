@@ -34,3 +34,6 @@ Route::get('/profile', function () {
 Route::get('/editprofile', function () {
     return view('auth.user.edit');
 });
+
+Route::get('/post/detail/{id}', 'PostController@detail');
+Route::post('/comment/send/{id}', 'CommentController@send');
