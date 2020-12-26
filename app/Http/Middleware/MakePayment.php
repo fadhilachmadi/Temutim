@@ -17,7 +17,7 @@ class MakePayment
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            if(Auth::user()->premium_memberships->isRegularUser()){
+            if(Auth::user()->status()){
                 return $next($request);
             }
         }
