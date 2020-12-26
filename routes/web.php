@@ -22,7 +22,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/premium/payment', 'PaymentController@goToPayment')->name('payment.show');
 Route::post('/payment/create', 'PaymentController@createPayment');
-Route::resource('user','UserController');
+Route::resource('user', 'UserController');
 Route::get('/contact', 'ContactUsController@index');
 Route::resource('contact', 'ContactUsController');
-Route::get('/offers','PaymentController@showOffer')->name('packageoffer');
+Route::get('/offers', 'PaymentController@showOffer')->name('packageoffer');
+
+
+
+Route::get('/newpost', function () {
+    return view('newpost');
+});

@@ -1,0 +1,29 @@
+.container-newpost {
+    border: 1px solid #00587a;
+    border-radius: 20px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 159px);
+}
+
+textarea[name="description"] {
+    resize: none;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+input[type="file"] button {
+    color: red;
+}
