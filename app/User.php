@@ -45,8 +45,4 @@ class User extends Authenticatable
     public function status(){
         return $this->status === "regular";
     }
-
-    public function premium_memberships(){
-        return $this->hasOne('App\PremiumMembership');
-    }
 }
