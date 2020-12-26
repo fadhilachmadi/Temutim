@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('css')
-    <link href="{{ asset('css/editprofile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     
@@ -29,7 +29,6 @@
 
                         <div class="col-md-12">
                             <div class="profile-head mt-3">
-                                @foreach ($users as $data)
                                 <tr>
                                     <p>Email {{$data->email}}</p>
                                     <p>Date of Birth {{$data->DOB}}</p>
@@ -38,7 +37,6 @@
                                     <p>Membership {{$data->status}}</p>
                                     <a class="btn btn-success" href="{{url('/editprofile')}}">Edit Profile</a>
                                 </tr>
-                                @endforeach
                             </div>
                         </div>
                     </div>
