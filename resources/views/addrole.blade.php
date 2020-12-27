@@ -16,7 +16,7 @@
             <h1>Add role to your post</h1>
             <hr>
             <div>
-                <form action="{{action('NewPostController@createRequiredRole', [$postId])}}" method="post" class="form-inline">
+                <form action="{{action('NewPostController@createRequiredRole', [$postId])}}" method="post" class="form-inline" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <div>

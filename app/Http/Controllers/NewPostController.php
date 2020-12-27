@@ -22,15 +22,23 @@ class NewPostController extends Controller
             'name' => 'required|min:1',
             'description' => 'required|min:1',
             'name' => 'required|min:1',
+            'imagefile' => 'required',
             'project_type' => 'required'
         ]);
+
+        $filename = 'no data';
+        $file = $request->file('imagefile');
+        $extension = $file->getClientOriginalExtension();
+        $filename = $file->getClientOriginalName() . time() . "." . $extension;
+        $file->storeAs('public/postImage', $filename);
+
 
         $newpost = new Post();
         $newpost->user_id = 1;
         $newpost->title = $request->name;
         $newpost->description = $request->description;
         $newpost->post_date = date('Y-m-d H:i:s');
-        $newpost->media_file = "no image";
+        $newpost->media_file = $filename;
         $newpost->save();
 
         $newid = $newpost->id;

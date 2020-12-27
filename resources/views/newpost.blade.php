@@ -15,7 +15,7 @@
         <div class="container-newpost">
             <h1>New Post</h1>
             <div class="mt-lg-5">
-                <form action="{{route('createnewpost')}}" method="post">
+                <form action="{{route('createnewpost')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <h4>Project Name</h4>
@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <h4>Image</h4>
                         <div>
-                            <input type="file" name="file" id="file" class="form-control w-50">
+                            <input type="file" name="imagefile" id="file" class="form-control w-50">
                         </div>
                     </div>
 
