@@ -46,3 +46,7 @@ Route::get('/profile/{id}', 'UserController@index');
 Route::get('/post/detail/{id}', 'PostController@detail');
 Route::post('/comment/send/{id}', 'CommentController@send');
 Route::get('/profile/{id}', 'UserController@index');
+Route::post('/post/new', 'NewPostController@createNewPost')->name('createnewpost');
+
+Route::get('/post/role/{id}', 'NewPostController@getPostRole')->name('addrolemenu');
+Route::post('/post/role/add/{id}', 'NewPostController@createRequiredRole')->name('addNewRole');

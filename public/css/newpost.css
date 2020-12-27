@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 
-.container {
+.py-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 159px);
+    min-height: calc(100vh - 111px);
 }
 
 textarea[name="description"] {
@@ -22,8 +22,4 @@ textarea[name="description"] {
 
 h4 {
     font-weight: bold;
-}
-
-input[type="file"] button {
-    color: red;
 }

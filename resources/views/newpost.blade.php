@@ -15,7 +15,7 @@
         <div class="container-newpost">
             <h1>New Post</h1>
             <div class="mt-lg-5">
-                <form action="" method="post">
+                <form action="{{route('createnewpost')}}" method="post">
                     @csrf
                     <div class="form-group">
                         <h4>Project Name</h4>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <h4>Description</h4>
                         <div>
-                            <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror""></textarea>
+                            <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror"></textarea>
                             @error('description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
