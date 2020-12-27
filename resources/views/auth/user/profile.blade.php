@@ -19,7 +19,7 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="/images/{{$data->profile_picture}}" alt="" style="width: 60px; height: 60px;"/>
+                                <img src="/storage/profile_pictures/{{$data->profile_picture}}" alt="" class="cutom-profile-picture"/>
                             </div>
 
                             <div class="col-md-8 pl-5 mt-2">

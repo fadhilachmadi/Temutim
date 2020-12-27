@@ -118,11 +118,11 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="profile_picture" class="col-md-4 col-form-label text-md-left"><img src="{{asset('images/upload_image.png')}}" alt=""> Profile Picture</label>
+                        <label for="profile_picture" class="col-md-4 col-form-label text-md-left" style="font-weight: bold;"><img src="{{asset('images/upload_image.png')}}" alt=""> &nbsp; &nbsp;Profile Picture</label>
 
                         <div class="col-md-6">
                             <input id="profile_picture" type="file" class="form-control @error('profile_picture') is-invalid @enderror" name="profile_picture" autocomplete="profile_picture" autofocus hidden>
-
+                            <img src="" id="category-img-tag" alt="no picture" class="profile-picture-1"/>
                             @error('profile_picture')
                             <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -131,9 +131,11 @@
                         </div>
                     </div>
 
+
+
                     <div class="form-group row mb-0">
                         <div class="col-md-6 ">
-                            <button type="submit" class="btn btn-primary btn-edit">
+                            <button type="submit" class="btn btn-success btn-edit">
                                 Edit Profile
                             </button>
                         </div>
@@ -144,4 +146,23 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#category-img-tag').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#profile_picture").change(function(){
+            readURL(this);
+        });
+    </script>
 @endsection
+
