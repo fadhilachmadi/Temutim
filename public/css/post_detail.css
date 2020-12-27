@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .comment-text{
-  padding: 0.25rem 1.5rem;
+    padding-top: 10px;
+    padding-left: 40px;
 }
 
 .comment-username{
@@ -73,4 +74,14 @@ h1, h2, h3, h4, h5, h6{
   padding: 1rem;
 }
 
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
+.user-picture{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}

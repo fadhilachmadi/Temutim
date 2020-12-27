@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EditProfileRequest;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -87,14 +88,15 @@ class UserController extends Controller
             $input = $request->all();
             $input['password']=bcrypt($request->password);
         }
-        $file = $request->file('profile_picture');
-        if($file){
+
+        if($file = $request->file('profile_picture')){
             if($user->profile_picture!=null) {
-                unlink('images/' . $user->profile_picture);
+                unlink('storage/profile_pictures/' . $user->profile_picture);
             }
-            $profile_picture = $user->username. "_" . $file->getClientOriginalName();
-            $file->move('images',$profile_picture);
+            $profile_picture = time() . $file->getClientOriginalName();
+            Storage::putFileAs('public/profile_pictures',$file,$profile_picture);
             $input['profile_picture'] = $profile_picture;
+
         }
 
         $user->update($input);

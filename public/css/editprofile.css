@@ -28,3 +28,10 @@
 .footer {
     position:unset !important;
 }
+
+.profile-picture-1 {
+    margin-top: 17px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

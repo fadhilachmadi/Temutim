@@ -70,11 +70,14 @@
 
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="/images/{{Auth::user()->profile_picture}}" alt="Profile Image" style="width: 50px">
+                                    <img src="/storage/profile_pictures/{{Auth::user()->profile_picture}}" alt="Profile Image" class="profile-picture">
 
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('profile/'.Auth::user()->id) }}">
+                                        Profile
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -85,9 +88,7 @@
                                         @csrf
                                     </form>
 
-                                    <a class="dropdown-item" href="{{ url('profile/'.Auth::user()->id) }}">
-                                     Profile
-                                    </a>
+
                                 </div>
 
 
