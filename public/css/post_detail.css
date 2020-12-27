@@ -1,0 +1,76 @@
+
+h1, h2, h3, h4, h5, h6{
+  color: #00587A;
+}
+
+.sub-title{
+  font-weight: bolder;
+}
+
+
+.container-custome{
+  border: 5px solid #00587A;
+  border-radius: 50px;
+  padding: 0;
+}
+
+.container-profile{
+  width: auto;
+  padding: 2rem 3rem;
+}
+
+
+
+.profile-text{
+  padding: 1rem 0rem 0rem 1rem;
+}
+
+.container-content, .sub-container{
+  padding:1rem;
+}
+
+.container-content{
+  border: 1px ridge #00587A;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.sub-container{
+  margin: 1rem 0rem;
+}
+
+.sub-container li{
+  padding: 0rem 3rem;
+}
+
+.comment-container{
+  width: auto;
+  padding: 2rem;
+}
+
+.comment-container ul{
+  list-style-type: none;
+  padding: 0.25rem;
+}
+
+.comment-profile{
+  margin: 1rem 0rem;
+  padding: 0rem 1rem;
+}
+
+.comment-text{
+  padding: 0.25rem 1.5rem;
+}
+
+.comment-username{
+  font-weight: bolder;
+}
+
+.comment-content{
+  padding-left: 1rem;
+}
+
+.form-custome{
+  padding: 1rem;
+}
+
+
