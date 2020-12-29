@@ -13,7 +13,7 @@
                         <label for="username" class="col-md-4 col-form-label text-md-left">Name</label>
 
                         <div class="col-md-6">
-                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{$user->username}}" required autocomplete="username" autofocus>
 
                             @error('username')
                             <span class="invalid-feedback" role="alert">
@@ -27,7 +27,7 @@
                         <label for="position" class="col-md-4 col-form-label text-md-left">Position</label>
 
                         <div class="col-md-6">
-                            <input id="position" type="text" class="form-control @error('position') is-invalid @enderror" name="position" value="{{ old('position') }}" required autocomplete="position" autofocus>
+                            <input id="position" type="text" class="form-control @error('position') is-invalid @enderror" name="position" value="{{$user->position}}" required autocomplete="position" autofocus>
 
                             @error('position')
                             <span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
                         <label for="email" class="col-md-4 col-form-label text-md-left">Email</label>
 
                         <div class="col-md-6">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$user->email}}" required autocomplete="email" autofocus>
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="phone_number" class="col-md-4 col-form-label text-md-left">{{ __('Phone Number') }}</label>
+                        <label for="phone_number" class="col-md-4 col-form-label text-md-left">{{$user->phone_number}}</label>
 
                         <div class="col-md-6">
                             <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number">

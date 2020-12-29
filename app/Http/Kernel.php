@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'EditProfile'=>\App\Http\Middleware\EditProfile::class,
         'PackageOffer'=>\App\Http\Middleware\PackageOffer::class,
         'MakePayment'=>\App\Http\Middleware\MakePayment::class,
+        'UserOnly'=>\App\Http\Middleware\UserOnly::class,
     ];
 }

@@ -43,7 +43,7 @@ Route::get('/editprofile', function () {
 });
 
 Route::get('/profile/{id}', 'UserController@index');
-Route::get('/post/detail/{id}', 'PostController@detail');
+Route::get('/post/detail/{id}', 'PostController@detail')->middleware('UserOnly');
 Route::post('/comment/send/{id}', 'CommentController@send');
 Route::get('/profile/{id}', 'UserController@index');
 Route::post('/post/new', 'NewPostController@createNewPost')->name('createnewpost');
