@@ -13,14 +13,9 @@
     background-color:  #38c172 !important;
     color: white;
 }
-.custom-file-Portfolio::after{
-    background-color:  #38c172 !important;
-    color: white;
-}
 
 .cutom-profile-picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-

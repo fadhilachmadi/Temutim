@@ -23,21 +23,44 @@
                             </div>
 
                             <div class="col-md-8 pl-5 mt-2">
-                                <h5>{{$data->username}}</h5>
-                                <small>{{$data->position}}</small>
+                                <h1>{{$data->username}}</h1>
+                                <h5>{{$data->position}}</h5>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="profile-head mt-3">
-                                <tr>
-                                    <p>Email {{$data->email}}</p>
-                                    <p>Date of Birth {{$data->DOB}}</p>
-                                    <p>Gender {{$data->gender}}</p>
-                                    <p>Phone {{$data->phone_number}}</p>
-                                    <p>Membership {{$data->status}}</p>
-                                    <a class="btn btn-success" href="{{route('user.edit',Auth::user()->id)}}">Edit Profile</a>
-                                </tr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" width="200px"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr height="40px">
+                                            <th scope="row">Email</th>
+                                            <td>{{$data->email}}</td>
+                                        </tr>
+                                        <tr height="40px">
+                                            <th scope="row">Date of Birth</th>
+                                            <td>{{$data->DOB}}</td>
+                                        </tr>
+                                        <tr height="40px">
+                                            <th scope="row">Gender</th>
+                                            <td>{{$data->gender}}</td>
+                                        </tr >
+                                        <tr height="40px">
+                                            <th scope="row">Phone</th>
+                                            <td>{{$data->phone_number}}</td>
+                                        </tr>
+                                        <tr height="40px">
+                                            <th scope="row">Membership</th>
+                                            <td>{{$data->status}}</td>
+                                        </tr>
+                                        <th scope="row" height="70px"><a class="btn btn-success" href="{{route('user.edit',Auth::user()->id)}}">Edit Profile</a></th>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -60,28 +83,26 @@
                         </div>
                     </div>
 
-                        <div class="col-md-12">
-                            <div class="profile-head mt-3">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <form>
-                                            <h5><strong>CV</strong></h5>
-                                            <div class="custom-file">
-                                              <input type="file" class="custom-file-input" id="customFile">
-                                              <label class="custom-file-label" for="customFile">Choose file</label>
-                                            </div>
-                                          </form>
-                                    </div>
-
-                                    <div class="col-md-12 mt-3">
-                                        <form>
-                                            <h5><strong>Portfolio</strong></h5>
-                                            <div class="custom-file">
-                                              <input type="file" class="custom-file-input" id="customPortofolio">
-                                              <label class="custom-file-label" for="customPortofolio">Choose file</label>
-                                            </div>
-                                          </form>
-                                    </div>
+                    <div class="col-md-12">
+                        <div class="profile-head mt-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form>
+                                        <h5><strong>CV</strong></h5>
+                                        <div class="custom-file">
+                                          <input type="file" name="customFile[]" class="input-cv custom-file-input" id="image">
+                                          <label class="custom-file-label label-cv" for="image">Choose file</label>
+                                        </div>
+                                      </form>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <form>
+                                        <h5><strong>Portfolio</strong></h5>
+                                        <div class="custom-file">
+                                          <input type="file" name="image[]" class="input-portofolio custom-file-input" id="customPortofolio">
+                                          <label class="custom-file-label label-portofolio" for="customPortofolio">Choose file</label>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -91,5 +112,33 @@
         </div>
     </div>
 </div>
-@endsection
+<script>
+    var inputArray = document.getElementsByClassName('input-cv');
+    
+    for(var i = 0; i < inputArray.length; i++){
+        inputArray[i].addEventListener('change',prepareUpload,false);
+    };
+    
+    function prepareUpload(event)
+    {
+        var files = event.target.files;
+        var fileName = files[0].name;
+        $('.label-cv').html(fileName);
+    }
+</script>
 
+<script>
+    var inputArray = document.getElementsByClassName('input-portofolio');
+    
+    for(var i = 0; i < inputArray.length; i++){
+        inputArray[i].addEventListener('change',prepareUpload,false);
+    };
+    
+    function prepareUpload(event)
+    {
+        var files = event.target.files;
+        var fileName = files[0].name;
+        $('.label-portofolio').html(fileName);
+    }
+</script>
+@endsection
