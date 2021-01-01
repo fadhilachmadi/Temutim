@@ -21,13 +21,14 @@
 
     <!-- Styles-->
     @yield('css')
+    
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md text-white" style="background-color: #00587A">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/images/logo_temutim.png" alt="Logo TemuTim" style="width: 150px">
                 </a>
@@ -114,7 +115,7 @@
         </div>
 
         <footer class="navbar navbar-expand-md text-white footer" style="background-color: #00587A">
-            <div class="container-fluid" style="padding: 10px 15px">
+            <div class="container" style="padding: 10px 15px">
 
                 <div class="navbar-nav mr-auto">
                     <h6 style="margin: 0">
