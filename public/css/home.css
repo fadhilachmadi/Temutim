@@ -1,0 +1,102 @@
+.suggestion p, .suggestion h5, .new-post-detail p, .post p, .post h5{
+    margin: 0;
+}
+
+.profile, .suggestion, .ads {
+    border: 1px solid #00587a;
+    border-radius: 20px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.suggestion-card{
+    display: flex;
+}
+
+.suggestion-title{
+    display: flex;
+    padding: 16px;
+}
+
+.suggestion-img{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestion-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.suggestion-detail{
+    width: 80%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-post-detail{
+    padding: 16px;
+    border-color: 00587A;
+    border: 1px solid #00587a;
+    border-radius: 20px;
+    display: flex;
+}
+
+.new-post-text{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-post-button{
+    width: 20%;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00587a;
+    border-radius: 20px;
+}
+
+.post-header{
+    padding: 16px;
+    display: flex;
+
+}
+
+.post-profile-photo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-profile-photo img {
+    width: 100%;
+}
+
+.post-info{
+    width: 90%;
+    padding-left: 16px;
+}
+
+.post-detail{
+    padding: 16px;
+}
+
+.post-photo{
+    height: 30%;
+}
+
+.post-photo img{
+    width: 100%;
+}
