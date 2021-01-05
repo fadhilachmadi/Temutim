@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Post;
+use Auth;
 use App\RequiredRole;
 use DateTime;
 use Illuminate\Http\Request;
