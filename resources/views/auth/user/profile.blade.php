@@ -114,11 +114,11 @@
 </div>
 <script>
     var inputArray = document.getElementsByClassName('input-cv');
-    
+
     for(var i = 0; i < inputArray.length; i++){
         inputArray[i].addEventListener('change',prepareUpload,false);
     };
-    
+
     function prepareUpload(event)
     {
         var files = event.target.files;
@@ -129,11 +129,11 @@
 
 <script>
     var inputArray = document.getElementsByClassName('input-portofolio');
-    
+
     for(var i = 0; i < inputArray.length; i++){
         inputArray[i].addEventListener('change',prepareUpload,false);
     };
-    
+
     function prepareUpload(event)
     {
         var files = event.target.files;
