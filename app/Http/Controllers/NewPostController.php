@@ -7,6 +7,7 @@ use App\Post;
 use App\RequiredRole;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewPostController extends Controller
 {
