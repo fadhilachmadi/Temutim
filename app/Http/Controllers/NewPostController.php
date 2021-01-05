@@ -34,7 +34,7 @@ class NewPostController extends Controller
 
 
         $newpost = new Post();
-        $newpost->user_id = 1;
+        $newpost->user_id = Auth::id();
         $newpost->title = $request->name;
         $newpost->description = $request->description;
         $newpost->post_date = date('Y-m-d H:i:s');
