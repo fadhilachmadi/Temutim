@@ -115,6 +115,7 @@
                     </div>
                     <div class="card-body">
                         @forelse($users as $user)
+                        <a href="/profile/{{$user->id}}">
                             <div class="suggestion-card">
                                 <div class="suggestion-img">
                                     <img src="/storage/profile_pictures/{{$user->profile_picture}}" alt="">
@@ -124,6 +125,7 @@
                                     <p>{{$user->position}}</p>
                                 </div>
                             </div>
+                        </a>
                         @empty
                             
                         @endforelse
