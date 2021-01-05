@@ -8,4 +8,5 @@ class RequiredRole extends Model
 {
     //
     protected $table = 'required_roles';
+    protected $guarded =[];
 }

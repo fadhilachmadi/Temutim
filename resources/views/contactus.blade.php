@@ -35,7 +35,7 @@
             <div class="mt-lg-5">
                 <form action="{{route('contact.store')}}" method="post">
                     @csrf
-                    <textarea name="feedback" id="feedback" placeholder="please give some feedback to us" class="@error('feedback') is-invalid @enderror""></textarea>
+                    <textarea name="feedback" id="feedback" placeholder="please give some feedback to us" class="@error('feedback') is-invalid @enderror"></textarea>
                     @error('feedback')
                         <span class="invalid-feedback" role="alert">
                             <strong>please input feedback</strong>
