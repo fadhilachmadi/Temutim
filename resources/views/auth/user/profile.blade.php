@@ -58,7 +58,9 @@
                                             <th scope="row">Membership</th>
                                             <td>{{$data->status}}</td>
                                         </tr>
-                                        <th scope="row" height="70px"><a class="btn btn-success" href="{{route('user.edit',Auth::user()->id)}}">Edit Profile</a></th>
+                                        @if(auth()->user()->id == $data->id)
+                                            <th scope="row" height="70px"><a class="btn btn-success" href="{{route('user.edit',Auth::user()->id)}}">Edit Profile</a></th>
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -71,7 +73,7 @@
         <div class="col-md-4">
             {{-- ads --}}
         </div>
-
+        @if(auth()->user()->id == $data->id)
         <div class="col-md-8 mt-3">
             <div class="row emp-AO">
                 <form method="POST">
@@ -110,6 +112,7 @@
                 </form>
             </div>
         </div>
+        @endif
     </div>
 </div>
 <script>

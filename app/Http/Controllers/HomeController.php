@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::all();
-        $users = DB::table('users')->whereNotIn('id', [auth()->user()->id])->get();
+        $users = DB::table('users')->whereNotIn('id', [auth()->user()->id])->inRandomOrder()->limit(3)->get();
         $projects = Post::where('user_id', auth()->user()->id)->get();
         return view('home')
         ->with('posts', $posts)
