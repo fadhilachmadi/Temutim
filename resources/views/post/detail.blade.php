@@ -50,7 +50,7 @@
     <div class="sub-container">
       <h2 class="sub-title">Image Attachment</h2>
       <div style="padding: 1rem 0rem">
-        <img src="/storage/postImage/{{$post->media_file}}" alt="" style="width: 100%; max-height: 400px; max-width: 1100px;">
+        <img src="/storage/postImage/{{$post->media_file}}" alt="" style="width: 100%; max-height: 700px; max-width: 1100px;">
       </div>
     </div>
 

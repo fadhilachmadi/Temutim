@@ -3,8 +3,8 @@
 @section('content')
 <div class="container container-login">
     <div class="row justify-content-center">
-        <div class="col-md-6 pt-5 mt-5">
-            <img src="{{ asset('images/logo_temutim.png') }}" alt="">
+        <div class="col-md-6">
+            <img src="{{ asset('images/temutim_logo_login.png') }}" alt="" style="width: 400px">
         </div>
         <div class="col-md-6 d-flex justify-content-center">
             <form method="POST" action="">

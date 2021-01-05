@@ -7,7 +7,7 @@
 
 @endsection
 
-<div class="container">
+<div class="container" style="margin-bottom: 150px">
     <div class="row">
         <div class="col-md-3">
             <div class="profile">

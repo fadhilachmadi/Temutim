@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{asset('css/editprofile.css')}}">
-    <div class="container">
+    <div class="container" style="margin-bottom: 50px">
         <div class="card custom-card">
             <h3 class="pt-4 text-center card-title">Edit Profile</h3>
             <div class="card-body custom-body pt-4">

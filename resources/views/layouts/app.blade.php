@@ -126,7 +126,7 @@
 
                 <div class="navbar-nav ml-auto">
                     <h6 style="margin: 0">
-                        Need help? Please <a href="#" class="text-white"><b>Contact Us</b></a>
+                        Need help? Please <a href="/contact" class="text-white"><b>Contact Us</b></a>
                     </h6>
 
                 </div>
