@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md text-white" style="background-color: #00587A">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/images/logo_temutim.png" alt="Logo TemuTim" style="width: 150px">
                 </a>
@@ -37,8 +37,8 @@
                 </button>
 
                 @if (Auth::user())
-                    <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <form class="form-inline" action="/" method="GET">
+                        <input class="form-control mr-sm-2" name ="search" type="text" placeholder="Search">
                         <button class="btn btn-success" type="submit">Search</button>
                     </form>
                 @endif
@@ -108,14 +108,12 @@
             @endif
         </div>
 
-        <div class="py-4">
+        <div class="py-4  container-custome">
             @yield('content')
-
-
         </div>
 
         <footer class="navbar navbar-expand-md text-white footer" style="background-color: #00587A">
-            <div class="container" style="padding: 10px 15px">
+            <div class="container-fluid" style="padding: 10px 15px">
 
                 <div class="navbar-nav mr-auto">
                     <h6 style="margin: 0">

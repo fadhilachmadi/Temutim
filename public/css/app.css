@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)z
@@ -10471,7 +10472,7 @@ button.bg-dark:focus {
   .ml-xl-n3,
   .mx-xl-n3 {
     margin-left: -1rem !important;
-  }
+  }s
 
   .m-xl-n4 {
     margin: -1.5rem !important;
@@ -10590,6 +10591,10 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+}
+
+.container-custome{
+  min-height: 100vh;
 }
 
 @media (min-width: 576px) {

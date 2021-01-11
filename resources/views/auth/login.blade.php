@@ -1,5 +1,9 @@
 @extends('layouts.layoutlogin')
 
+@section('title')
+    <title>TemuTim Login</title>
+@endsection
+
 @section('content')
 <div class="container container-login">
     <div class="row justify-content-center">

@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title')
+    <title>TemuTim Home</title>
+@endsection
 
 @section('css')
 <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-
 @endsection
 
+@section('content')
 <div class="container" style="margin-bottom: 150px">
     <div class="row">
         <div class="col-md-3">
