@@ -26,7 +26,8 @@
 </head>
 <body>
     <div id="app">
-        <div class="py-4">
+
+        <div class="py-4 container-custome">
             @yield('content')
         </div>
 

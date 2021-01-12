@@ -25,9 +25,11 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::all();
+        $search = $request->get('search');
+
+        $posts = Post::where('title', 'like', '%'.$search.'%')->orWhere('description', 'like', '%'.$search.'%')->get();
         $users = DB::table('users')->whereNotIn('id', [auth()->user()->id])->inRandomOrder()->limit(3)->get();
         $projects = Post::where('user_id', auth()->user()->id)->get();
         return view('home')
