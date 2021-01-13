@@ -5,10 +5,11 @@
 @endsection
 
 @section('css')
-<link href="{{ asset('css/home.css') }}" rel="stylesheet">
+
 @endsection
 
 @section('content')
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 <div class="container" style="margin-bottom: 150px">
     <div class="row">
         <div class="col-md-3">
@@ -43,7 +44,7 @@
                             <p>None</p>
                         </div>
                     @endforelse
-                    
+
                 @else
                     <div class="row pl-3">
                         <h5>Profile</h5>
@@ -60,29 +61,29 @@
                 @endif
             </div>
         </div>
-         
+
         <div class="col-md-6">
             @if(Auth::check())
                 <div class="new-post-detail justify-content-center mb-4">
                     <div class="new-post-text">
                         <p>Have some project? Please share it</p>
                     </div>
-                    
+
                     <div class="new-post-button">
                         <a class="btn btn-primary" href="/newpost">New Post</a>
                     </div>
                 </div>
             @endif
-            
+
             @forelse($posts as $post)
                 <a href="/post/detail/{{$post->id}}">
                     <div class="post mb-4">
                         <div class="post-header">
                             <div class="post-profile-photo">
-                                <img src="/storage/profile_pictures/{{$post->user->profile_picture}}" alt="">
+                                <img src="/storage/profile_pictures/{{$post->user->profile_picture}}" alt="" class="custom-profile-picture">
                             </div>
                             <div class="post-info">
-                                <h5>{{$post->user->username}}</h5>
+                                <h5 class="mt-1">{{$post->user->username}}</h5>
                                 <p>{{$post->post_date}}</p>
                             </div>
                         </div>
@@ -129,7 +130,7 @@
                             </div>
                         </a>
                         @empty
-                            
+
                         @endforelse
                     </div>
                 @else

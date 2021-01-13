@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('a');
 
         $posts = Post::where('title', 'like', '%'.$search.'%')->orWhere('description', 'like', '%'.$search.'%')->get();
         $users = DB::table('users')->whereNotIn('id', [auth()->user()->id])->inRandomOrder()->limit(3)->get();
@@ -36,7 +36,16 @@ class HomeController extends Controller
         ->with('posts', $posts)
         ->with('users', $users)
         ->with('projects', $projects);
+    }
 
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $users = User::where('username','like','%'.$search.'%')->orderBy("username")->paginate(1);
+        $posts = Post::where('title','like', '%'.$search.'%')->orWhere('description','like','%'.$search.'%')->paginate(1);
+        $users->appends($request->all());
+        $posts->appends($request->all());
+        return view('result', compact('search', 'users','posts'));
     }
 }

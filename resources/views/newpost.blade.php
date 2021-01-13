@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <h4>Image</h4>
                         <div>
-                            <input type="file" name="imagefile" id="file" class="form-control w-50">
+                            <input type="file" name="imagefile" id="file" class="form-control w-25 h-25">
                         </div>
                     </div>
 

@@ -21,7 +21,7 @@
 
     <!-- Styles-->
     @yield('css')
-    
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 </head>
@@ -37,7 +37,7 @@
                 </button>
 
                 @if (Auth::user())
-                    <form class="form-inline" action="/" method="GET">
+                    <form class="form-inline" action="/result" method="GET">
                         <input class="form-control mr-sm-2" name ="search" type="text" placeholder="Search">
                         <button class="btn btn-success" type="submit">Search</button>
                     </form>
@@ -108,11 +108,11 @@
             @endif
         </div>
 
-        <div class="py-4  container-custome">
+        <div class="py-4">
             @yield('content')
         </div>
 
-        <footer class="navbar navbar-expand-md text-white footer" style="background-color: #00587A">
+        <footer id="footer" class="navbar navbar-expand-md text-white footer" style="background-color: #00587A">
             <div class="container-fluid" style="padding: 10px 15px">
 
                 <div class="navbar-nav mr-auto">
@@ -133,11 +133,37 @@
 
         </footer>
 
-
-
-
-
-
     </div>
 </body>
 </html>
+<script>
+    window.addEventListener("load", activateStickyFooter);
+
+    function activateStickyFooter() {
+        adjustFooterCssTopToSticky();
+        window.addEventListener("resize", adjustFooterCssTopToSticky);
+    }
+    function adjustFooterCssTopToSticky() {
+        const footer = document.querySelector("#footer");
+        const bounding_box = footer.getBoundingClientRect();
+        const footer_height = bounding_box.height;
+        const window_height = window.innerHeight;
+        const above_footer_height = bounding_box.top - getCssTopAttribute(footer);
+        if (above_footer_height + footer_height <= window_height) {
+            const new_footer_top = window_height - (above_footer_height + footer_height);
+            footer.style.top = new_footer_top + "px";
+        } else if (above_footer_height + footer_height > window_height) {
+            footer.style.top = null;
+        }
+    }
+
+    function getCssTopAttribute(htmlElement) {
+        const top_string = htmlElement.style.top;
+        if (top_string === null || top_string.length === 0) {
+            return 0;
+        }
+        const extracted_top_pixels = top_string.substring(0, top_string.length - 2);
+        return parseFloat(extracted_top_pixels);
+    }
+
+</script>

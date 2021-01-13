@@ -1,0 +1,66 @@
+
+.custom-profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.custom-card {
+    border: 2px solid #00587a;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 57%;
+    height: 150px;
+}
+
+.custom-container {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.title {
+    color: #00587a;
+}
+
+.username-style {
+    font-size: 20pt;
+    font-weight: bold;
+    margin-left: -20px;
+}
+
+.position-style {
+    margin-left: -20px;
+    font-weight: lighter;
+}
+
+.post-title {
+    font-weight: 800;
+    margin-top: 20px;
+    font-size: 20pt;
+    margin-left: 20px;
+}
+
+.arrow {
+    height: 25px;
+    margin-left: 35rem;
+}
+
+@media (max-width: 1000px) {
+    .arrow {
+        margin-left: 19rem;
+    }
+
+    .username-style {
+        font-size: 20pt;
+        margin-left: 10px;
+    }
+
+    .position-style {
+        margin-left: 10px;
+    }
+
+    .custom-card {
+        height: auto;
+    }
+}

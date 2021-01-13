@@ -6,14 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EditProfileRequest;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-
-    public function __construct(){
-        $this->middleware('EditProfile');
-    }
 
     /**
      * Display a listing of the resource.
@@ -66,6 +63,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+        if($id != Auth::user()->id) {
+            return abort('403');
+        }
         $user =User::findOrFail($id);
         return view('auth.user.edit', compact('user'));
     }
@@ -114,4 +114,5 @@ class UserController extends Controller
     {
         //
     }
+
 }

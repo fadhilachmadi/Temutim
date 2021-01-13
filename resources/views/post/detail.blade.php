@@ -5,23 +5,24 @@
 @endsection
 
 @section('css')
-<link href="{{ asset('css/post_detail.css') }}" rel="stylesheet">
+
 
 @endsection
 
 @section('content')
+    <link href="{{ asset('css/post_detail.css') }}" rel="stylesheet">
  <div class="container container-custome" style="padding: 0">
 
   <div class="row container-profile">
 
-    <div style="width: 100px">
+    <a href="/profile/{{$post->user->id}}" style="width: 100px">
       <img src="/storage/profile_pictures/{{$post->user->profile_picture}}"  alt="Profile Picture" class="user-picture">
-    </div>
+    </a>
 
-    <div class="profile-text" >
+    <a href="/profile/{{$post->user->id}}" class="profile-text" >
       <h1 style="font-weight:bolder">{{$post->user->username}}</h1>
       <h5>{{$post->user->position}}</h5>
-    </div>
+    </a>
 
 
   </div>
@@ -42,7 +43,7 @@
       <h2 class="sub-title">Required Role</h2>
         <ul>
             @foreach ($roles as $role)
-            <li><h5>{{$role->name}}</h5></li>
+            <li><h5 class="role-name">{{$role->name}}</h5></li>
             @endforeach
         </ul>
     </div>
@@ -85,8 +86,5 @@
   <div>
 
   </div>
-
-
-
 </div>
 @endsection

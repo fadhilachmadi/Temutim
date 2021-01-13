@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username','position', 'email', 'DOB', 'gender','phone_number','profile_picture', 'password', 'status'
+        'username','position', 'email', 'DOB', 'gender','phone_number','profile_picture', 'password', 'status', 'CV', 'portfolio'
     ];
 
     /**
@@ -37,10 +37,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function isUser(){
-        return $this->id === Auth::user()->id;
-    }
 
     public function status(){
         return $this->status === "regular";

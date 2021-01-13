@@ -48,7 +48,8 @@ a:hover{
 }
 
 .suggestion-img img{
-    width: 100%;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
@@ -61,7 +62,7 @@ a:hover{
 
 .new-post-detail{
     padding: 16px;
-    border-color: 00587A;
+    border-color: #00587A;
     border: 1px solid #00587a;
     border-radius: 20px;
     display: flex;
@@ -71,11 +72,13 @@ a:hover{
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 15px;
 }
 
 .new-post-button{
     width: 20%;
+    margin-right: 20px;
 }
 
 .post{
@@ -117,4 +120,11 @@ a:hover{
 
 .post-photo img{
     width: 100%;
+}
+
+.custom-profile-picture {
+    width: 20px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 15px;
 }
