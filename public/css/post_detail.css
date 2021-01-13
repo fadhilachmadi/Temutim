@@ -1,5 +1,5 @@
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5{
   color: #00587A;
 }
 
@@ -19,7 +19,9 @@ h1, h2, h3, h4, h5, h6{
   padding: 2rem 3rem;
 }
 
-
+.role-name {
+    margin-left: -40px;
+}
 
 .profile-text{
   padding: 1rem 0rem 0rem 1rem;
@@ -30,8 +32,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .container-content{
-  border: 1px ridge #00587A;
-  border-radius: 15px 15px 0px 0px;
+    border: 1px ridge #00587A;
+    width: 100.3%;
 }
 
 .sub-container{

@@ -18,11 +18,11 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6 ml-3 mt-1">
                                 <img src="/storage/profile_pictures/{{$data->profile_picture}}" alt="" class="cutom-profile-picture"/>
                             </div>
 
-                            <div class="col-md-8 pl-5 mt-2">
+                            <div class="col-md-5" style="margin-top: 10px;">
                                 <h1>{{$data->username}}</h1>
                                 <h5>{{$data->position}}</h5>
                             </div>
@@ -92,12 +92,12 @@
                                     <form>
                                         <h5><strong>CV</strong></h5>
                                         <div class="custom-file">
-                                          <input type="file" name="customFile[]" class="input-cv custom-file-input" id="image">
-                                          <label class="custom-file-label label-cv" for="image">Choose file</label>
+                                          <input id="CV" type="file" name="CV" class="input-cv custom-file-input" >
+                                          <label class="custom-file-label label-cv" for="CV">Choose file</label>
                                         </div>
                                       </form>
                                 </div>
-                                <div class="col-md-12 mt-3">
+                                <div class="col-md-12 mt-5">
                                     <form>
                                         <h5><strong>Portfolio</strong></h5>
                                         <div class="custom-file">

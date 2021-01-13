@@ -22,7 +22,7 @@ Route::resource('user', 'UserController');
 Route::get('/contact', 'ContactUsController@index');
 Route::resource('contact', 'ContactUsController');
 Route::get('/offers', 'PaymentController@showOffer')->name('packageoffer');
-
+Route::get('/result', 'HomeController@search')->name('search');
 
 
 Route::get('/newpost', function () {
@@ -41,7 +41,6 @@ Route::get('/editprofile', function () {
 Route::get('/profile/{id}', 'UserController@index');
 Route::get('/post/detail/{id}', 'PostController@detail')->middleware('UserOnly');
 Route::post('/comment/send/{id}', 'CommentController@send');
-Route::get('/profile/{id}', 'UserController@index');
 Route::post('/post/new', 'NewPostController@createNewPost')->name('createnewpost');
 
 Route::get('/post/role/{id}', 'NewPostController@getPostRole')->name('addrolemenu');
