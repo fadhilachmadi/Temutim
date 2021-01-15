@@ -127,7 +127,7 @@ class UserController extends Controller
 
     }
 
-    public function editCV(Reqeust $request){
+    public function editCV(Request $request){
         $user = User::findOrFail($request->id);
         if($file = $request->file('CV')){
             if($user->CV != null) {
@@ -135,7 +135,7 @@ class UserController extends Controller
             }
             $CV = time() . $file->getClientOriginalName();
             Storage::putFileAs('public/',$file,$CV);
-           
+
             $user->update(['CV' => $CV]);
             return back();
 
