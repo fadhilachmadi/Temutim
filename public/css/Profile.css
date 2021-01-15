@@ -32,3 +32,13 @@
     height: 100px;
     border-radius: 50%;
 }
+
+.downloadable_file{
+    color:rgb(0, 149, 218);
+    text-decoration: underline;
+}
+
+.downloadable_file:hover{
+    color:blue;
+    text-decoration: underline;
+}

@@ -2,9 +2,9 @@
 @section('css')
     <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
 @endsection
-
+    
 @section('title')
-    <title>{{Auth::user()->username}} | Profile</title>
+    <title>{{$data->username}} | Profile</title>
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="profile-img">
-                                <h2 class="text-center Account-overview">Account Overview</h2>
+                                <h1 class="text-center Account-overview">Account Overview</h1>
                             </div>
                         </div>
 
@@ -77,14 +77,14 @@
     
 
 
-        @if(auth()->user()->id == $data->id)
+        
         <div class="col-md-8 mt-3">
             <div class="row emp-AO">
                 <form method="POST">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="profile-img">
-                                <h2 class="text-center Account-overview">Experience</h2>
+                                <h1 class="text-center Account-overview">Account Overview</h1>
                             </div>
                         </div>
                     </div>
@@ -96,29 +96,24 @@
                                 <div class="col-md-12">
                                     <h5><strong>CV</strong></h5>
                                     <form action="">
-                                        <div class="form-group row" style="height : auto">
-                                            @if ($data->CV == null)
-                                                <p>No Data</p>
-                                            @else
-                                                <a href="{{ route('download.cv',$data->CV) }}">{{$data->CV}}</a>
-                                            @endif
-                                        </div>
+                                        @if ($data->CV == null)
+                                            <p>No Data</p>
+                                        @else
+                                            <a href="{{ route('download.cv',$data->CV) }}" class="downloadable_file">{{$data->CV}}</a>
+                                        @endif
                                     </form>
 
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 mt-4">
                                     <h5><strong>Portfolio</strong></h5>
                                     <form action="">
 
-                                        <div class="form-group row" style="height : auto">
-                                            @if ($data->portfolio == null)
-                                                No Data
-                                            @else
-                                                <a href="{{ route('download.portofolio',$data->portfolio) }}">{{$data->portfolio}}</a>
-                                            @endif
-
-                                        </div>
+                                        @if ($data->portfolio == null)
+                                            No Data
+                                        @else
+                                            <a href="{{ route('download.portofolio',$data->portfolio) }}" class="downloadable_file">{{$data->portfolio}}</a>
+                                        @endif
                                     </form>
                                 </div>
                             </div>
@@ -127,7 +122,7 @@
                 </form>
             </div>
         </div>
-        @endif
+        
     </div>
 </div>
 @endsection
