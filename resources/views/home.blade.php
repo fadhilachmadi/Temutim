@@ -36,7 +36,7 @@
                             <img src="\images\project.png" alt="">
                         </div>
                         <div class="row ml-2 overflow-hidden">
-                            <p class="overflow-hidden">{{ \Illuminate\Support\Str::limit($project->title, 20, '...') }}</p>
+                            <p class="overflow-hidden">{{\Illuminate\Support\Str::limit($project->title, 20, '...') }}</p>
                         </div>
                     </div>
                     @empty

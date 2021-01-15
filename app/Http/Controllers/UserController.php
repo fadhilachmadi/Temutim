@@ -85,6 +85,7 @@ class UserController extends Controller
             $input = $request->except('password');
         }
         else{
+
             $input = $request->all();
             $input['password']=bcrypt($request->password);
         }
@@ -126,22 +127,6 @@ class UserController extends Controller
         return back()->with('msg','Update Profile Success!');
 
     }
-
-    public function editCV(Reqeust $request){
-        $user = User::findOrFail($request->id);
-        if($file = $request->file('CV')){
-            if($user->CV != null) {
-                unlink('storage/' . $user->CV);
-            }
-            $CV = time() . $file->getClientOriginalName();
-            Storage::putFileAs('public/',$file,$CV);
-           
-            $user->update(['CV' => $CV]);
-            return back();
-
-        }
-    }
-
     /**
      * Remove the specified resource from storage.
      *

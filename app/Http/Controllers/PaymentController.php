@@ -25,6 +25,10 @@ class PaymentController extends Controller
 
     public function createPayment(Request $request){
 
+        $request->validate([
+            'payment_type' => 'required'
+        ]);
+
         PremiumMembership::create([
             'user_id' => Auth::user()->id,
             'payment_id' => $request->payment_type,
