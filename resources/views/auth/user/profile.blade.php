@@ -8,9 +8,9 @@
 @endsection
 
 @section('content')
-    
+
 <div class="container">
-    <div class="justify-content-center">
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="row emp-AO">
                 <form method="POST">
@@ -74,7 +74,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    
 
 
         @if(auth()->user()->id == $data->id)
@@ -97,14 +97,6 @@
                                     <h5><strong>CV</strong></h5>
                                     <form action="">
                                         <div class="form-group row" style="height : auto">
-                                            {{-- <input id="user_id" type="hidden" class=""  name="id" value="{{Auth::user()->id}}">
-
-                                            <input id="user_cv" type="file" class="col-md-8 form-control input-cv" name="CV" placeholder="Browser file" style="width: 70%">
-
-                    
-                                            <div class="col-md-4">
-                                                <button type="button" class="btn btn-success">Upload</button>
-                                            </div> --}}
                                             @if ($data->CV == null)
                                                 <p>No Data</p>
                                             @else
@@ -126,12 +118,6 @@
                                                 <a href="{{ route('download.portofolio',$data->portfolio) }}">{{$data->portfolio}}</a>
                                             @endif
 
-                                            {{-- <input id="customPortofolio" type="file" class="col-md-8 form-control input-portofolio"  name="portfolio" value="{{Auth::user()->CV}}"  placeholder="Browser file" >
-
-                    
-                                            <div class="col-md-4">
-                                                <button type="button" class="btn btn-success">Upload</button>
-                                            </div> --}}
                                         </div>
                                     </form>
                                 </div>
@@ -142,34 +128,6 @@
             </div>
         </div>
         @endif
+    </div>
 </div>
-{{-- <script>
-    var inputArray = document.getElementsByClassName('input-cv');
-
-    for(var i = 0; i < inputArray.length; i++){
-        inputArray[i].addEventListener('change',prepareUpload,false);
-    };
-
-    function prepareUpload(event)
-    {
-        var files = event.target.files;
-        var fileName = files[0].name;
-        $('.label-cv').html(fileName);
-    }
-</script>
-
-<script>
-    var inputArray = document.getElementsByClassName('input-portofolio');
-
-    for(var i = 0; i < inputArray.length; i++){
-        inputArray[i].addEventListener('change',prepareUpload,false);
-    };
-
-    function prepareUpload(event)
-    {
-        var files = event.target.files;
-        var fileName = files[0].name;
-        $('.label-portofolio').html(fileName);
-    }
-</script> --}}
 @endsection
