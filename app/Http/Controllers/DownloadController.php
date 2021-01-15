@@ -11,11 +11,19 @@ class DownloadController extends Controller
     //
     public function downloadCV($filename)
     {
-        return Storage::download("CV/" . $filename);
+        $file_path = public_path('storage/CV/' . $filename);
+        if (!file_exists($file_path)) {
+            return back();
+        }
+        return response()->download($file_path);
     }
 
     public function downloadPortofolio($filename)
     {
-        return Storage::download('portofolio/' . $filename);
+        $file_path = public_path('storage/portfolio/' . $filename);
+        if (!file_exists($file_path)) {
+            return back();
+        }
+        return response()->download($file_path);
     }
 }

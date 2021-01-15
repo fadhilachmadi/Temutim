@@ -47,3 +47,7 @@ Route::get('/post/role/{id}', 'NewPostController@getPostRole')->name('addrolemen
 Route::post('/post/role/add/{id}', 'NewPostController@createRequiredRole')->name('addNewRole');
 
 Route::patch('/editCV', 'UserController@editCV')->name('edit.cv');
+
+Route::get('/cv/{filename}', 'DownloadController@downloadCV')->name('download.cv');
+
+Route::get('/portofolio/{filename}', 'DownloadController@downloadPortofolio')->name('download.portofolio');
