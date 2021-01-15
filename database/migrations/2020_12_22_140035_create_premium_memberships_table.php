@@ -16,9 +16,9 @@ class CreatePremiumMembershipsTable extends Migration
         Schema::create('premium_memberships', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedBigInteger('payment_id');
-            $table->foreign('payment_id')->references('id')->on('payments');
+            $table->foreign('payment_id')->references('id')->on('payments')->onUpdate('cascade')->onDelete('cascade');
             $table->string('status')->default('');
             $table->dateTime('start_date');
             $table->dateTime('end_date');

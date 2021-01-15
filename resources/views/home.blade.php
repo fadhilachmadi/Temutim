@@ -31,12 +31,12 @@
                         <h5>Your Project</h5>
                     </div>
                     @forelse($projects as $project)
-                    <div class="row justify-around">
+                    <div class="row justify-around overflow-hidden">
                         <div class="profile-image ml-4">
                             <img src="\images\project.png" alt="">
                         </div>
                         <div class="row ml-2 overflow-hidden">
-                            <p>{{$project->title}}</p>
+                            <p class="overflow-hidden">{{ \Illuminate\Support\Str::limit($project->title, 20, '...') }}</p>
                         </div>
                     </div>
                     @empty
@@ -130,7 +130,7 @@
                             </div>
                         </a>
                         @empty
-
+                        <p>There is no other users...</p>
                         @endforelse
                     </div>
                 @else
