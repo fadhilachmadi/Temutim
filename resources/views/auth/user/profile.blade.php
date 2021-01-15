@@ -10,6 +10,7 @@
 @section('content')
     
 <div class="container">
+    <div class="justify-content-center">
         <div class="col-md-8">
             <div class="row emp-AO">
                 <form method="POST">
@@ -73,6 +74,8 @@
                 </form>
             </div>
         </div>
+    </div>
+
 
         @if(auth()->user()->id == $data->id)
         <div class="col-md-8 mt-3">

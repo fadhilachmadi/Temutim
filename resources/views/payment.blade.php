@@ -11,8 +11,8 @@
 
 @section('content')
     @if($errors->any())
-      <div class="alert alert-danger">
-        <ul>
+      <div class="container alert alert-danger">
+        <ul class>
           @foreach ($errors->all() as $error)
             <li>{{$error}}</li>
           @endforeach    
