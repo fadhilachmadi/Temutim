@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'portfolio' => '',
             'status' => 'Premium',
             'email_verified_at' => '2020-01-15',
-            'password' => 'admin'
+            'password' =>Hash::make('admin')
         ]);
     }
 }
