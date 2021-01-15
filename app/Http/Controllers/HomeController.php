@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $search = $request->get('a');
 
-        $posts = Post::where('title', 'like', '%'.$search.'%')->orWhere('description', 'like', '%'.$search.'%')->get();
+        $posts = Post::all();
         $users = DB::table('users')->whereNotIn('id', [auth()->user()->id])->inRandomOrder()->limit(3)->get();
         $projects = Post::where('user_id', auth()->user()->id)->get();
         return view('home')

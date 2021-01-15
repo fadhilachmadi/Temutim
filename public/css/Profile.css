@@ -9,9 +9,22 @@
     color: #00587a;
     font-weight: 700;
 }
-.custom-file-label::after{
+/* .custom-file-label::after{
+    display : none;
     background-color:  #38c172 !important;
     color: white;
+} */
+
+.button-custom{
+    background-color:  #38c172 !important;
+    color: white;
+}
+
+
+
+.custom-file-input{
+    width: 50%;
+    background-color:white;
 }
 
 .cutom-profile-picture {

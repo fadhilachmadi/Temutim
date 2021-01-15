@@ -45,3 +45,5 @@ Route::post('/post/new', 'NewPostController@createNewPost')->name('createnewpost
 
 Route::get('/post/role/{id}', 'NewPostController@getPostRole')->name('addrolemenu');
 Route::post('/post/role/add/{id}', 'NewPostController@createRequiredRole')->name('addNewRole');
+
+Route::patch('/editCV', 'UserController@editCV')->name('edit.cv');

@@ -37,7 +37,7 @@ class PaymentController extends Controller
             'status' => "premium"
         ]);
 
-        return redirect('/home');
+        return redirect('/home')->with('msg', 'Congratulations, you are a Premium Member now!');
     }
 
     public function showOffer(){

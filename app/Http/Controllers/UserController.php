@@ -100,8 +100,46 @@ class UserController extends Controller
         }
 
         $user->update($input);
+
+        if ($request->CV == null){
+            $CV = $user->CV;
+        }
+        else{
+            $CVOriginName = $request->CV->getClientOriginalName();
+            $CVFullName = time() . $CVOriginName;
+            $request->CV->move(public_path('storage/CV'), $CVFullName);
+            $CV = $CVFullName;
+        }
+
+        if ($request->portfolio == null){
+            $portfolio = $user->portfolio;
+        }
+        else{
+            $portfolioOriginName = $request->portfolio->getClientOriginalName();
+            $portfolioFullName = time() . $portfolioOriginName;
+            $request->portfolio->move(public_path('storage/portfolio'), $portfolioFullName);
+            $portfolio = $portfolioFullName;
+        }
+
+        $user->update(['CV' => $CV, 'portfolio' => $portfolio]);
+
         return back()->with('msg','Update Profile Success!');
 
+    }
+
+    public function editCV(Reqeust $request){
+        $user = User::findOrFail($request->id);
+        if($file = $request->file('CV')){
+            if($user->CV != null) {
+                unlink('storage/' . $user->CV);
+            }
+            $CV = time() . $file->getClientOriginalName();
+            Storage::putFileAs('public/',$file,$CV);
+           
+            $user->update(['CV' => $CV]);
+            return back();
+
+        }
     }
 
     /**

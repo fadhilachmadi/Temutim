@@ -1,9 +1,14 @@
 @extends('layouts.app')
 @section('css')
-
-@endsection
-@section('content')
     <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
+@endsection
+
+@section('title')
+    <title>{{Auth::user()->username}} | Profile</title>
+@endsection
+
+@section('content')
+    
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -87,22 +92,38 @@
 
                     <div class="col-md-12">
                         <div class="profile-head mt-3">
+
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form>
-                                        <h5><strong>CV</strong></h5>
-                                        <div class="custom-file">
-                                          <input id="CV" type="file" name="CV" class="input-cv custom-file-input" >
-                                          <label class="custom-file-label label-cv" for="CV">Choose file</label>
+                                    <h5><strong>CV</strong></h5>
+                                    <form action="">
+                                        <div class="form-group row" style="height : auto">
+                                            <input id="user_id" type="hidden" class=""  name="id" value="{{Auth::user()->id}}">
+
+                                            <input id="user_cv" type="file" class="col-md-8 form-control input-cv" name="CV" placeholder="Browser file" style="width: 70%">
+
+                    
+                                            <div class="col-md-4">
+                                                <button type="button" class="btn btn-success">Upload</button>
+                                            </div>
                                         </div>
-                                      </form>
+                                    </form>
+
                                 </div>
-                                <div class="col-md-12 mt-5">
-                                    <form>
-                                        <h5><strong>Portfolio</strong></h5>
-                                        <div class="custom-file">
-                                          <input type="file" name="image[]" class="input-portofolio custom-file-input" id="customPortofolio">
-                                          <label class="custom-file-label label-portofolio" for="customPortofolio">Choose file</label>
+
+                                <div class="col-md-12">
+                                    <h5><strong>Portfolio</strong></h5>
+                                    <form action="">
+
+                                        <div class="form-group row" style="height : auto">
+
+
+                                            <input id="customPortofolio" type="file" class="col-md-8 form-control input-portofolio"  name="portfolio" value="{{Auth::user()->CV}}"  placeholder="Browser file" >
+
+                    
+                                            <div class="col-md-4">
+                                                <button type="button" class="btn btn-success">Upload</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -115,7 +136,7 @@
         @endif
     </div>
 </div>
-<script>
+{{-- <script>
     var inputArray = document.getElementsByClassName('input-cv');
 
     for(var i = 0; i < inputArray.length; i++){
@@ -143,5 +164,5 @@
         var fileName = files[0].name;
         $('.label-portofolio').html(fileName);
     }
-</script>
+</script> --}}
 @endsection
