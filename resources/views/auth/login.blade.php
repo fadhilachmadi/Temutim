@@ -16,7 +16,7 @@
                 <div class="row py-1">
                     <h2>Let's find your own team!</h2>
                 </div>
-                
+
                         <div class="form-group row py-1">
                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
@@ -56,5 +56,5 @@
                         </div>
                     </form>
     </div>
-</div>
+    </div></div>
 @endsection
