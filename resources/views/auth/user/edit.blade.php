@@ -137,7 +137,7 @@
                         <label for="CV" class="col-md-4 col-form-label text-md-left">CV</label>
 
                         <div class="col-md-6">
-                            <input id="CV" type="file" class="form-control" name="CV" >
+                            <input id="CV" type="file" class="form-control overflow-hidden" name="CV" >
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@
                         <label for="portfolio" class="col-md-4 col-form-label text-md-left">Portfolio</label>
 
                         <div class="col-md-6">
-                            <input id="portfolio" type="file" class="form-control"  name="portfolio">
+                            <input id="portfolio" type="file" class="form-control overflow-hidden"  name="portfolio">
                         </div>
                     </div>
 
