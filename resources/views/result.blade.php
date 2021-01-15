@@ -4,10 +4,10 @@
     <link rel="stylesheet" href="{{asset('css/result.css')}}">
     <div class="container custom-container">
         <h3>Result for '{{$search}}'</h3>
-        @if(sizeof($posts) == 0 && sizeof($users) == 0)
+        @if($search == "" || (sizeof($posts) == 0 && sizeof($users) == 0))
             <h3>There is no username or post match with your query</h3>
         @endif
-        @if(sizeof($users) != 0)
+        @if(sizeof($users) != 0 && $search != "")
             <h2 class="font-weight-bold title mt-4">User Profile</h2>
             @foreach($users as $user)
                 <a href="/profile/{{$user->id}}">
@@ -34,7 +34,7 @@
                 {{$users->links()}}
             </div>
         @endif
-        @if(sizeof($posts) != 0)
+        @if(sizeof($posts) != 0 && $search != "")
             <h2 class="font-weight-bold title mt-5">Project Post</h2>
             @foreach($posts as $post)
                 <a href="/post/detail/{{$post->id}}">

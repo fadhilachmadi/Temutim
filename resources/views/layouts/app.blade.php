@@ -108,6 +108,14 @@
             @endif
         </div>
 
+        <div class="container">
+            @if(session('fail'))
+                <div class="alert alert-danger" role="alert" style="margin: 20px; ">
+                    {{ session('fail') }}
+                </div>
+            @endif
+        </div>
+
         <div class="py-4">
             @yield('content')
         </div>

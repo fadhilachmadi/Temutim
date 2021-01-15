@@ -13,7 +13,7 @@ class DownloadController extends Controller
     {
         $file_path = public_path('storage/CV/' . $filename);
         if (!file_exists($file_path)) {
-            return back();
+            return back()->with('fail','Data not available in our storage!');
         }
         return response()->download($file_path);
     }
@@ -22,7 +22,7 @@ class DownloadController extends Controller
     {
         $file_path = public_path('storage/portfolio/' . $filename);
         if (!file_exists($file_path)) {
-            return back();
+            return back()->with('fail','Data not available in our storage!');
         }
         return response()->download($file_path);
     }
