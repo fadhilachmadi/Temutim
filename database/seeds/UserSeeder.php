@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'profile_picture' => 'default_profile_picture.png',
             'CV' => '',
             'portfolio' => '',
-            'status' => 'Premium',
+            'status' => 'premium',
             'email_verified_at' => '2020-01-15',
             'password' =>Hash::make('admin')
         ]);
