@@ -16,7 +16,7 @@ class CreateRequiredRolesTable extends Migration
         Schema::create('required_roles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('post_id')->references('id')->on('posts')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->integer('quantity');
             $table->timestamps();
