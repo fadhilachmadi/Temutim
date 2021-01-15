@@ -10,7 +10,6 @@
 @section('content')
     
 <div class="container">
-    <div class="row">
         <div class="col-md-8">
             <div class="row emp-AO">
                 <form method="POST">
@@ -75,9 +74,6 @@
             </div>
         </div>
 
-        <div class="col-md-4">
-            {{-- ads --}}
-        </div>
         @if(auth()->user()->id == $data->id)
         <div class="col-md-8 mt-3">
             <div class="row emp-AO">
@@ -134,7 +130,6 @@
             </div>
         </div>
         @endif
-    </div>
 </div>
 {{-- <script>
     var inputArray = document.getElementsByClassName('input-cv');
