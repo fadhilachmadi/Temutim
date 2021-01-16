@@ -21,7 +21,7 @@
                 <div class="row justify-content-center">
                     <h5 class="card-title">{{Auth::user()->username}}
                         @if(Auth::user()->status == 'premium')
-                        <img src="/storage/profile_pictures/crown.png" alt="crown_image" style="width: 25px; margin-bottom: 5px;">
+                        <img src="/images/crown.png" alt="crown_image" style="width: 25px; margin-bottom: 5px;">
                         @endif
                     </h5>
                 </div>
@@ -90,7 +90,7 @@
 
                             <h5 class="mt-1">{{$post->user->username}}
                                 @if($post->user->status == 'premium')
-                                <img src="/storage/profile_pictures/crown.png" alt="crown_image" style="width: 25px; margin-bottom: 5px;">
+                                <img src="/images/crown.png"  alt="crown_image" style="width: 25px; margin-bottom: 5px;">
                                 @endif
                             </h5>
 
@@ -136,7 +136,7 @@
                             <div class="suggestion-detail">
                                 <h5 class="mt-1">{{$user->username}}
                                     @if($user->status == 'premium')
-                                    <img src="/storage/profile_pictures/crown.png" alt="crown_image" style="width: 25px; margin-bottom: 5px;">
+                                    <img src="/images/crown.png"  alt="crown_image" style="width: 25px; margin-bottom: 5px;">
                                     @endif
                                 </h5>
                                 <p>{{$user->position}}</p>
