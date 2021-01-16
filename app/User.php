@@ -41,4 +41,7 @@ class User extends Authenticatable
     public function status(){
         return $this->status === "regular";
     }
+
+
+    
 }

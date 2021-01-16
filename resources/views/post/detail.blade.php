@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
- <title>Detail Page</title>
+ <title>{{$post->title}}</title>
 @endsection
 
 @section('css')
@@ -43,7 +43,7 @@
       <h2 class="sub-title">Required Role</h2>
         <ul>
             @foreach ($roles as $role)
-            <li><h5 class="role-name">{{$role->name}}</h5></li>
+            <li><h5 class="role-name">{{$role->name}} ({{$role->quantity}} slot)</h5></li>
             @endforeach
         </ul>
     </div>
