@@ -18,8 +18,8 @@ class PostSeeder extends Seeder
             'user_id' => 1,
             'title' => 'Project Laravel Web Prog',
             'description' => 'Membuat project web prog untuk bulan januari',
-            'media_file' => '/images/ovo_logo.png',
-            'post_date' => Carbon::now(),    
+            'media_file' => 'template.jpeg',
+            'post_date' => Carbon::now(),
         ]);
     }
 }

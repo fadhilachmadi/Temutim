@@ -91,7 +91,7 @@ class UserController extends Controller
         }
 
         if($file = $request->file('profile_picture')){
-            if($user->profile_picture!=null) {
+            if($user->profile_picture!=null && $user->profile_picture != "default_profile_picture.png") {
                 unlink('storage/profile_pictures/' . $user->profile_picture);
             }
             $profile_picture = time() . $file->getClientOriginalName();
