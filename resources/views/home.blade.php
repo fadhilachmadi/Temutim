@@ -35,14 +35,16 @@
                     <h5>Your Project</h5>
                 </div>
                 @forelse($projects as $project)
-                <div class="row justify-around overflow-hidden">
-                    <div class="profile-image ml-4">
-                        <img src="\images\project.png" alt="">
+                <a href="/post/detail/{{$project->id}}">
+                    <div class="row justify-around overflow-hidden mt-2" >
+                        <div class="profile-image ml-4">
+                            <img src="\images\project.png" alt="">
+                        </div>
+                        <div class="row ml-2 overflow-hidden">
+                            <p class="overflow-hidden">{{\Illuminate\Support\Str::limit($project->title, 20, '...') }}</p>
+                        </div>
                     </div>
-                    <div class="row ml-2 overflow-hidden">
-                        <p class="overflow-hidden">{{\Illuminate\Support\Str::limit($project->title, 20, '...') }}</p>
-                    </div>
-                </div>
+                </a>
                 @empty
                 <div class="row pl-3">
                     <p>None</p>

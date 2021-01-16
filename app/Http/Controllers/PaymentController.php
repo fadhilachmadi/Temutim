@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Payment;
 use App\User;
 use App\PremiumMembership;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
 class PaymentController extends Controller
