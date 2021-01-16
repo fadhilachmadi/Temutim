@@ -33,6 +33,7 @@ a:hover{
 
 .suggestion-card{
     display: flex;
+    margin: 0 0 10px;
 }
 
 .suggestion-title{
@@ -86,6 +87,10 @@ a:hover{
     flex-direction: column;
     border: 1px solid #00587a;
     border-radius: 20px;
+}
+
+.post:hover{
+    background-color: rgb(245, 245, 245);
 }
 
 .post-header{
