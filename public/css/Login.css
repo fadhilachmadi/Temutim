@@ -22,6 +22,13 @@ footer{
     color: white;
     padding: 5px 150px;
 }
+
+.btn-login:hover{
+    background-color: #003b52;
+    color: white;
+    padding: 5px 150px;
+}
+
 .container-login{
     margin-top: 200px;
     margin-bottom: 235px;

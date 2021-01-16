@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    <title>{{$user->username}} | Edit Profile</title>
+@endsection
+
 @section('content')
     <link rel="stylesheet" href="{{asset('css/editprofile.css')}}">
     <div class="container" style="margin-bottom: 50px">

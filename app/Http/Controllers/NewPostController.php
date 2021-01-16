@@ -49,6 +49,11 @@ class NewPostController extends Controller
 
     public function createRequiredRole(Request $request, $id)
     {
+        $this->validate($request, [
+            'name' => 'required|min:1',
+            'quantity' => 'required|min:1',
+        ]);
+
         $newRole = new RequiredRole();
         $newRole->post_id = $id;
         $newRole->name = $request->name;
