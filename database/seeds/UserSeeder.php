@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@mail.com',
             'DOB' => '2000-01-01',
             'gender' => 'male',
-            'phone_number' => '0811231312',
+            'phone_number' => '08112313121',
             'profile_picture' => 'default_profile_picture.png',
             'CV' => '',
             'portfolio' => '',
