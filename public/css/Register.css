@@ -3,6 +3,13 @@
     color: white;
     padding: 5px 150px;
 }
+
+.btn-register:hover{
+    background-color: #003b52;
+    color: white;
+    padding: 5px 150px;
+}
+
 body{
     background-color: #00587A;
 }

@@ -32,7 +32,7 @@
 
                     <div class="form-group">
                         <div>
-                            <input placeholder="quantity" id="quantity" type="number" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" required>
+                            <input placeholder="quantity" id="quantity" type="number" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" min="1"  required>
                             @error('description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
