@@ -29,7 +29,7 @@
 
                             <div class="col-md-5" style="margin-top: 10px;">
                                 <h1>{{$data->username}}</h1>
-                                <h5>{{$data->position}}</h5>
+                                <h5 style="padding-left: 5px;">{{$data->position}}</h5>
                             </div>
                         </div>
 
@@ -44,15 +44,29 @@
                                         </tr>
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Date of Birth</strong</h5></th>
+                                            @if($data->DOB == null)
+                                            <td><h5>-</h5></td>
+                                            @else
                                             <td><h5>{{$data->DOB}}</h5></td>
+                                            @endif
                                         </tr>
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Gender</strong</h5></th>
+                                            @if($data->gender == null)
+                                            <td><h5>-</h5></td>
+                                            @else
                                             <td><h5>{{$data->gender}}</h5></td>
+                                            @endif
+                                          
                                         </tr>
                                         <tr height="40px">
-                                            <th scope="row"><h5><strong>Phone</strong</h5></th>
+                                            <th scope="row"><h5><strong>Phone</strong></h5></th>
+                                            @if($data->phone_number == null)
+                                            <td><h5>-</h5></td>
+                                            @else
                                             <td><h5>{{$data->phone_number}}</h5></td>
+                                            @endif
+                                           
                                         </tr>
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Membership</strong</h5></th>
