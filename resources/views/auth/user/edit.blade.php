@@ -135,13 +135,17 @@
                         </div>
                     </div>
 
-                    <div class="form-group row" style="height : auto">
-                        {{-- <input id="user_id" type="hidden" class=""  name="id" value="{{Auth::user()->id}}"> --}}
+                    <div class="form-group row mb-5" style="height : auto">
 
                         <label for="CV" class="col-md-4 col-form-label text-md-left">CV</label>
 
                         <div class="col-md-6">
-                            <input id="CV" type="file" class="form-control overflow-hidden h-100" name="CV" >
+                            <input id="CV" type="file" class="form-control overflow-hidden h-100 @error('CV') is-invalid @enderror" name="CV" >
+                                @error('CV')
+                                <span class="invalid-feedback m-3" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                @enderror
                         </div>
                     </div>
 
@@ -150,7 +154,12 @@
                         <label for="portfolio" class="col-md-4 col-form-label text-md-left">Portfolio</label>
 
                         <div class="col-md-6">
-                            <input id="portfolio" type="file" class="form-control overflow-hidden h-100"  name="portfolio">
+                            <input id="portfolio" type="file" class="form-control overflow-hidden h-100 @error('portfolio') is-invalid @enderror"  name="portfolio">
+                                @error('portfolio')
+                                <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                @enderror
                         </div>
                     </div>
 

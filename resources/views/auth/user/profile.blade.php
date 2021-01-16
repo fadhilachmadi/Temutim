@@ -36,7 +36,7 @@
                         <div class="col-md-12">
                             <div class="profile-head" style="margin-top: 30px;">
                                 <table class="table table-bordered">
-          
+
                                     <tbody class="" >
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Email</strong</h5></th>
