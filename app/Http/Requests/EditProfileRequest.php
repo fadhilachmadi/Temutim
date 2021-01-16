@@ -36,5 +36,5 @@ class EditProfileRequest extends FormRequest
             'portfolio' => 'max:2048'
         ];
     }
-    
+
 }
