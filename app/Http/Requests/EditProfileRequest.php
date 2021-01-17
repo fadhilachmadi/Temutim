@@ -37,4 +37,17 @@ class EditProfileRequest extends FormRequest
         ];
     }
 
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'CV.max' => 'Maximum Size is 2MB',
+            'portfolio.max' => 'Maximum size is 2M',
+        ];
+    }
+
 }

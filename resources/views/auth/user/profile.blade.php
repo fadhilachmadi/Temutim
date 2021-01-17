@@ -15,7 +15,7 @@
             <div class="row emp-AO" style="margin: 0 auto;">
                 <form method="POST">
                     @csrf
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="col-md-12">
                             <div class="profile-img">
                                 <h1 class="text-center Account-overview">Account Overview</h1>
@@ -23,11 +23,11 @@
                         </div>
 
                         <div class="row mt-4">
-                            <div class="col-md-6 ml-3 mt-1">
+                            <div class="col-md-3 mt-1 mr-3" style="margin-left: -20px;">
                                 <img src="/storage/profile_pictures/{{$data->profile_picture}}" alt="" class="cutom-profile-picture" />
                             </div>
 
-                            <div class="col-md-5" style="margin-top: 10px;">
+                            <div class="col-md-8 ml-4" style="margin-top: 10px;">
                                 <h1>{{$data->username}}</h1>
                                 <h5 style="padding-left: 5px;">{{$data->position}}</h5>
                             </div>
@@ -57,7 +57,7 @@
                                             @else
                                             <td><h5>{{$data->gender}}</h5></td>
                                             @endif
-                                          
+
                                         </tr>
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Phone</strong></h5></th>
@@ -66,7 +66,7 @@
                                             @else
                                             <td><h5>{{$data->phone_number}}</h5></td>
                                             @endif
-                                           
+
                                         </tr>
                                         <tr height="40px">
                                             <th scope="row"><h5><strong>Membership</strong</h5></th>

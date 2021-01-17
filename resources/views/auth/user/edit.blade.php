@@ -137,7 +137,7 @@
 
                     <div class="form-group row mb-5" style="height : auto">
 
-                        <label for="CV" class="col-md-4 col-form-label text-md-left">CV</label>
+                        <label for="CV" class="col-md-4 col-form-label text-md-left">CV (max 2MB)</label>
 
                         <div class="col-md-6">
                             <input id="CV" type="file" class="form-control overflow-hidden h-100 @error('CV') is-invalid @enderror" name="CV" >
@@ -151,7 +151,7 @@
 
                     <div class="form-group row" style="height : auto">
 
-                        <label for="portfolio" class="col-md-4 col-form-label text-md-left">Portfolio</label>
+                        <label for="portfolio" class="col-md-4 col-form-label text-md-left">Portfolio (Max 2MB)</label>
 
                         <div class="col-md-6">
                             <input id="portfolio" type="file" class="form-control overflow-hidden h-100 @error('portfolio') is-invalid @enderror"  name="portfolio">
